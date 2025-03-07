@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0A0A0A;
+    color: #FFFFFF;
+}
+
+.secao {
+    padding: 100px 0;
+    padding-left: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin-left: 50px;
+}
+
+ul {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    min-height: 85vh;
+}
+
+.principal h1 {
+    font-size: 80px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -4px;
+}
+
+.principal h1 span {
+    color: #4D7CFE;
+}
+
+.principal p {
+    font-size: 20px;
+    color: #C0C0C0;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #4D7CFE;
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+.titutlo-secao {
+    font-size: 42px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.titutlo-secao::after {
+    content: '';
+    width: 100px;
+    background-color: #4D7CFE;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+}
+
+.grade-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-projetos {
+    background-color: #161616;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img-projeto {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.info-projeto {
+    padding: 20px;
+}
+
+.info-projeto h3 {
+    margin-bottom: 10px;
+}
+
+.info-projeto p {
+    color: #BBB;
+    margin-bottom: 15px;
+}
+
+.info-projeto a {
+    color: #4D7CFE;
+    font-weight: 500;
+}
+
+.sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.img-sobre {
+    height: 400px;
+    background-color: #161616;
+    border-radius: 10px;
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+.conteudo-sobre h2 {
+    margin-bottom: 30px;
+}
+
+.conteudo-sobre p {
+    margin-bottom: 20px;
+    color: #BBB;
+}
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.tag-habilidades {
+    background-color: rgba(77, 124, 254, 0.2);
+    color: #4D7CFE;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.botoes-contato {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.botao-contato {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: 500;
+    min-width: 160px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.email {
+    background-color: #EA4335;
+}
+
+.linkedin {
+    background-color: #0077B5;
+}
+
+.github {
+    background-color: #333;
+}
+
+footer {
+    padding: 20px 5%;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+/*Efeito de cursor CSS*/
+
+.efeito-cursor {
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.efeito-cursor:hover {
+    transform: translateY(-10px);
+}
+
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(77, 124, 254, 0.2);
+    z-index: 99;
+    transform: translate(-50%, -50%);
+}
+
+/*Responsivo*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    ul {
+        gap: 20px;
+        justify-content: flex-start;
+    }
+
+    .principal h1 {
+        font-size: 50px;
+    }
+
+    .principal p {
+        font-size: 15px;
+    }
+
+    .secao {
+        padding: 60px 20px;
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .img-sobre {
+        height: auto;
+    }
+}
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
